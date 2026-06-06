@@ -86,3 +86,39 @@ num1=float(input("Enter first number: "))
 num2=float(input("Enter second number: "))
 result=calculator(operation,num1,num2)
 print("Result:", result)
+
+#8
+# Create a text file and store student details in it
+with open("student_details.txt", "w") as f:
+    f.write("Student Name: John Doe\n")
+    f.write("Roll Number: 12345\n")
+    f.write("Grade: A\n")
+
+#9 Read data from a file
+with open("student_details.txt", "r") as f:
+    data=f.read()
+    print("Student Details:\n", data)
+
+#10
+# Handling division by zero using exception handling
+def safe_division(num1, num2):
+    try:
+        result=num1/num2
+        return result
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed"
+num1=float(input("Enter first number: "))
+num2=float(input("Enter second number: "))
+result=safe_division(num1, num2)
+print("Result:", result)
+
+#11
+# Create a student class with name and marks
+class Student:
+    def __init__(self, name, marks):
+        self.name=name
+        self.marks=marks
+
+    def display(self):
+        print("Student Name:", self.name)
+        print("Marks:", self.marks) 
